@@ -1,0 +1,26 @@
+﻿@model Phongban
+
+<div class="modal fade" id="delete-model" tabindex="-1" role="dialog" aria-labelledby="delete-model-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        
+        <div class="modal-content">
+            <form asp-action="Delete" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h5 class="text-danger font-weight-bold">XÓA PHÒNG BAN</h5>
+                </div>
+                <div class="modal-body form-horizontal">
+
+                    <div class=" col-12 ml-auto mr-auto container">
+                        <h5 class="text-center font-weight-bold text-primary">Xác nhận xóa phòng ban: <span class="text-danger font-weight-bolder">@Model.Ten</span></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" localize-content>Thoát</button>
+                    <input class="btn btn-danger" value="Xóa" localize-content type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_ValidationScriptsPartial")
